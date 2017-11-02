@@ -1,6 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+$tablecolorblack: solid #000;
 $gameborderblack: 000;
 
 header {
@@ -11,9 +12,12 @@ header {
   text-align: center;
 }
 
-.game-board {
-  display: inline-block;
-  margin-left: 30%;
-  position: absolute;
-  text-align: center;
+table {
+  margin-left: 32%;
+}
+
+td {
+  border: 1px $tablecolorblack;
+  height: 220px;
+  width: 220px;
 }
