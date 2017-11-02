@@ -1,2 +1,19 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$gameborderblack: 000;
+
+header {
+  text-align: center;
+}
+
+.game-title {
+  text-align: center;
+}
+
+.game-board {
+  display: inline-block;
+  margin-left: 30%;
+  position: absolute;
+  text-align: center;
+}
