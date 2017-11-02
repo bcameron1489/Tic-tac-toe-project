@@ -1,2 +1,23 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$tablecolorblack: solid #000;
+$gameborderblack: 000;
+
+header {
+  text-align: center;
+}
+
+.game-title {
+  text-align: center;
+}
+
+table {
+  margin-left: 32%;
+}
+
+td {
+  border: 1px $tablecolorblack;
+  height: 220px;
+  width: 220px;
+}
