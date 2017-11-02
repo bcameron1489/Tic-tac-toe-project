@@ -9,3 +9,9 @@ require('./assets/scripts/index.js')
 
 // styles
 require('./assets/styles/index.scss')
+
+const table = document.getElementById('grid')
+
+table.addEventListener('click', function () {
+  console.log('Hello world')
+})
