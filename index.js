@@ -55,3 +55,8 @@ sqEight.addEventListener('click', function () {
 sqNine.addEventListener('click', function () {
   console.log('testing postition 9')
 })
+/*
+$('#position-one').on('click', function (event) {
+  $(this).html('x')
+})
+*/
