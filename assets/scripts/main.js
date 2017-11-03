@@ -1,51 +1,58 @@
-require('./assets/styles/index.scss')
+const grid = {
+  sqOne: document.getElementById('position-one'),
+  sqTwo: document.getElementById('position-two'),
+  sqThree: document.getElementById('position-three'),
+  sqFour: document.getElementById('position-four'),
+  sqFive: document.getElementById('position-five'),
+  sqSix: document.getElementById('position-six'),
+  sqSeven: document.getElementById('position-seven'),
+  sqEight: document.getElementById('position-eight'),
+  sqNine: document.getElementById('position-nine')
+}
+const addHandlers = function () {
+// event listeners for visual aid
+  grid.sqOne.addEventListener('click', function () {
+    console.log('testing postition 1')
+  })
 
-const sqOne = document.getElementById('position-one')
-const sqTwo = document.getElementById('position-two')
-const sqThree = document.getElementById('position-three')
-const sqFour = document.getElementById('position-four')
-const sqFive = document.getElementById('position-five')
-const sqSix = document.getElementById('position-six')
-const sqSeven = document.getElementById('position-seven')
-const sqEight = document.getElementById('position-eight')
-const sqNine = document.getElementById('position-nine')
+  grid.sqTwo.addEventListener('click', function () {
+    console.log('testing postition 2')
+  })
 
-sqOne.addEventListener('click', function () {
-  console.log('testing postition 1')
-})
+  grid.sqThree.addEventListener('click', function () {
+    console.log('testing postition 3')
+  })
 
-sqTwo.addEventListener('click', function () {
-  console.log('testing postition 2')
-})
+  grid.sqFour.addEventListener('click', function () {
+    console.log('testing postition 4')
+  })
 
-sqThree.addEventListener('click', function () {
-  console.log('testing postition 3')
-})
+  grid.sqFive.addEventListener('click', function () {
+    console.log('testing postition 5')
+  })
 
-sqFour.addEventListener('click', function () {
-  console.log('testing postition 4')
-})
+  grid.sqSix.addEventListener('click', function () {
+    console.log('testing postition 6')
+  })
 
-sqFive.addEventListener('click', function () {
-  console.log('testing postition 5')
-})
+  grid.sqSeven.addEventListener('click', function () {
+    console.log('testing postition 7')
+  })
 
-sqSix.addEventListener('click', function () {
-  console.log('testing postition 6')
-})
+  grid.sqEight.addEventListener('click', function () {
+    console.log('testing postition 8')
+  })
 
-sqSeven.addEventListener('click', function () {
-  console.log('testing postition 7')
-})
+  grid.sqNine.addEventListener('click', function () {
+    console.log('testing postition 9')
+  })
 
-sqEight.addEventListener('click', function () {
-  console.log('testing postition 8')
-})
+  // jquery
+  $('grid').on('click', function (event) {
+    $('grid').html('X')
+  })
+}
 
-sqNine.addEventListener('click', function () {
-  console.log('testing postition 9')
-})
-
-$('#position-one').on('click', function () {
-  this.html('X')
-})
+module.exports = {
+  addHandlers
+}
