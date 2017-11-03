@@ -4,21 +4,55 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 $tablecolorblack: solid #000;
 
 $gameborderblack: 000;
+$pagecolor: #d34f1b;
+$footerbackcolor: #000;
+$foottextcolor: #fff;
+
+html {
+  background-color: $pagecolor;
+}
+
+.bodystylediv {
+  background-color: $pagecolor;
+}
 
 header {
+  background-color: $pagecolor;
+  margin-top: 10%;
   text-align: center;
 }
 
-.game-title {
+h3 {
   text-align: center;
+}
+
+footer {
+  background-color: $footerbackcolor;
+  color: $foottextcolor;
+  height: 15%;
+  padding: 10% auto;
+}
+
+form {
+  display: block;
+  float: left;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  width: 150px;
 }
 
 table {
+  margin-bottom: 10%;
   margin-left: 32%;
-}
+  }
 
 td {
   border: 1px $tablecolorblack;
   height: 220px;
   width: 220px;
+}
+
+.topcolorscheme {
+  background-color: $footerbackcolor;
 }
