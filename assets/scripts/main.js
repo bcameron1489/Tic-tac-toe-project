@@ -14,7 +14,7 @@ const addHandlers = function () {
   grid.sqOne.addEventListener('click', function () {
     console.log('testing postition 1')
   })
-
+// trim the fat here... can i use 1 event handler for click.
   grid.sqTwo.addEventListener('click', function () {
     console.log('testing postition 2')
   })
@@ -48,8 +48,8 @@ const addHandlers = function () {
   })
 
   // jquery
-  $('grid').on('click', function (event) {
-    $('grid').html('X')
+  $('').on('click', function (event) {
+    $().html('X')
   })
 }
 
