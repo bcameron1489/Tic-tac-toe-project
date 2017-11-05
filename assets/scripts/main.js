@@ -1,3 +1,4 @@
+/*    not needed due to jquery
 const grid = {
   sqOne: document.getElementById('position-one'),
   sqTwo: document.getElementById('position-two'),
@@ -9,8 +10,10 @@ const grid = {
   sqEight: document.getElementById('position-eight'),
   sqNine: document.getElementById('position-nine')
 }
-const addHandlers = function () {
-// event listeners for visual aid
+*/
+
+// event listeners for visual aid - commented out, obsolete due to jquery
+/*
   grid.sqOne.addEventListener('click', function () {
     console.log('testing postition 1')
   })
@@ -46,13 +49,27 @@ const addHandlers = function () {
   grid.sqNine.addEventListener('click', function () {
     console.log('testing postition 9')
   })
+*/
+// jquery
 
-  // jquery
-  $('').on('click', function (event) {
-    $().html('X')
+const addHandler = function () {
+  const gameInfo = {
+  //  playerOne: ('X')         use later
+  //  playerTwo: ('O')            ||
+    turn: (0)
+  //  moves: (0)
+  }
+  gameInfo.turn = 0
+  $('.game-piece').click(function () {
+    if (gameInfo.turn % 2 === 0) {
+      $(this).html('X')
+    } else {
+      $(this).html('O')
+    }
+    gameInfo.turn += 1
   })
 }
 
 module.exports = {
-  addHandlers
+  addHandler
 }
