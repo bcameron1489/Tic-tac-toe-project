@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-
-const addHandler = function () {
-=======
 // turn game logic
 
 const tileSelect = function () {
->>>>>>> jsbasiclogic
   const gameInfo = {
     turn: (0)
   // moves: (0)
