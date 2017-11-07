@@ -36,21 +36,21 @@ const tileSelect = function () {
       if (sq0 !== '' & sq0 === sq1 & sq1 === sq2) {
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq3 !== '' & sq3 === sq4 & sq4 === sq5) {
-        return $(showWinner).html(sq1 + ' Wins')
-      } else if (sq6 !== '' & sq6 === sq7 & sq7 === sq8) {
-        return $(showWinner).html(sq2 + ' Wins')
-      } else if (sq0 !== '' & sq0 === sq3 & sq3 === sq6) {
         return $(showWinner).html(sq3 + ' Wins')
-      } else if (sq1 !== '' & sq1 === sq4 & sq4 === sq7) {
-        return $(showWinner).html(sq4 + ' Wins')
-      } else if (sq2 !== '' & sq2 === sq5 & sq5 === sq8) {
-        return $(showWinner).html(sq5 + ' Wins')
-      } else if (sq0 !== '' & sq0 === sq4 & sq4 === sq8) {
+      } else if (sq6 !== '' & sq6 === sq7 & sq7 === sq8) {
         return $(showWinner).html(sq6 + ' Wins')
+      } else if (sq0 !== '' & sq0 === sq3 & sq3 === sq6) {
+        return $(showWinner).html(sq0 + ' Wins')
+      } else if (sq1 !== '' & sq1 === sq4 & sq4 === sq7) {
+        return $(showWinner).html(sq1 + ' Wins')
+      } else if (sq2 !== '' & sq2 === sq5 & sq5 === sq8) {
+        return $(showWinner).html(sq2 + ' Wins')
+      } else if (sq0 !== '' & sq0 === sq4 & sq4 === sq8) {
+        return $(showWinner).html(sq0 + ' Wins')
       } else if (sq6 !== '' & sq6 === sq4 & sq4 === sq2) {
-        return $(showWinner).html(sq7 + ' Wins')
+        return $(showWinner).html(sq6 + ' Wins')
       } else { // no winner so return "false"
-        console.log('false')
+        return false
       }
     })
   }
@@ -60,12 +60,12 @@ const tileSelect = function () {
   const gameBoard = $('.turn')
   $('#game-grid').click(function () {
     if (gameInfo.turn === 9) {
-      $(gameBoard).html('Game Over')
+      $(gameBoard).html('Tie!')
     } else if
     (gameInfo.turn % 2 === 1) {
-      $(gameBoard).html('Player Two!')
+      $(gameBoard).html('Player 2\'s Turn!')
     } else {
-      $(gameBoard).html('Player One!')
+      $(gameBoard).html('Player 1\'s Turn!')
     }
   })
 }
