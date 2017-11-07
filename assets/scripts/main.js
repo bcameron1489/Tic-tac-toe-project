@@ -5,14 +5,18 @@ const tileSelect = function () {
     turn: (0)
   // moves: (0)
   }
+  const gameBoard = $('.turn')
+
   // alternate turns
   const takeTurns = function () {
     $('.game-piece').on('click', function (event) {
       if (gameInfo.turn % 2 === 0) {
         $(this).html('X')
+        $(gameBoard).html('Player 2\'s Turn!')
       } else if
       (gameInfo.turn % 2 === 1) {
         $(this).html('O')
+        $(gameBoard).html('Player 1\'s Turn!')
       } else {
         console.log('gameover')
       }
@@ -54,20 +58,10 @@ const tileSelect = function () {
       }
     })
   }
+
   takeTurns()
   checkWinner()
   // display turn
-  const gameBoard = $('.turn')
-  $('#game-grid').click(function () {
-    if (gameInfo.turn === 9) {
-      $(gameBoard).html('Tie!')
-    } else if
-    (gameInfo.turn % 2 === 1) {
-      $(gameBoard).html('Player 2\'s Turn!')
-    } else {
-      $(gameBoard).html('Player 1\'s Turn!')
-    }
-  })
 }
 module.exports = {
   tileSelect
