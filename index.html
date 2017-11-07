@@ -12,29 +12,36 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <div class="bodystylediv">
-        <div class="topcolorscheme">
-      <form class="sign-up">
-        <div class="container">
-          <button type="button" class="just for show">
-            Just For Show
-          </button>
-    </div>
+      <form id="sign-up">
+      <fieldset>
+        <input type="text" name="credentials[email]" class="input" placeholder="email">
+        <input type="password" name="credentials[password]" class="input" placeholder="password">
+        <input type="password" name="credentials[password_confirmation]" class="input" placeholder="password confirmation">
+        <button type="submit" class="submit">
+          Sign Up!
+        </button>
+      </fieldset>
   </form>
   <form class="sign-up">
     <div class="container">
-      <button type="button" class="just for show">
-        Just For Show
-      </button>
+
 </div>
 </form></br>
+<div class="bodystylediv">
+  <div class="topcolorscheme">
 </div>
       <header>
         <h1>Brian Cameron's Tic Tac Toe</h1>
       </header>
 </br>
+<h3 class="alerts-heading">Alerts</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2 box alerts">
+      </div>
+    </div>
+  </div>
 <div class="game-title">
-<h3>game title</h3>
 </div>
 </br>
 <div class="winner"> </div>
