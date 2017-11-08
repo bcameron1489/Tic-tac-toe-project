@@ -3,11 +3,12 @@
 const tileSelect = function () {
   const gameInfo = {
     turn: (0)
-  // moves: (0)
   }
+  // give variable to the class which shows turn
   const gameBoard = $('.turn')
 
-  // alternate turns
+  // alternate turns first by checking if the cell has been taken already
+  // then run an if statement checking modulus for turn x = 0 / O = 1
   const takeTurns = function () {
     $('.game-piece').on('click', function (event) {
       if ($(this).html() === 'X' || $(this).html() === 'O') {
@@ -22,12 +23,15 @@ const tileSelect = function () {
         $(this).html('O')
         $(gameBoard).html('Player 1\'s Turn!')
       } else {
-        console.log('gameover')
+        return null
       }
-
       gameInfo.turn += 1
     })
   }
+
+  // function containing the html properties of each cell
+  // it then runs if statement by checking to make sure the cell is not empty
+  // if the statement results in true return x or o and 'Wins'/else return false
   const checkWinner = function () {
     const showWinner = $('.winner')
     $('.game-piece').click(function (event) {
@@ -42,6 +46,7 @@ const tileSelect = function () {
       const sq8 = $('#tile-eight').html()
 
       if (sq0 !== '' & sq0 === sq1 & sq1 === sq2) {
+        $('.game-piece').html('')
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq3 !== '' & sq3 === sq4 & sq4 === sq5) {
         return $(showWinner).html(sq3 + ' Wins')
@@ -62,13 +67,12 @@ const tileSelect = function () {
       }
     })
   }
-
-
-
-
+  // function triggers making sure turn goes before winner is checked or
+  // else it will take an additional click to register the html element for win
   takeTurns()
   checkWinner()
 }
+
 module.exports = {
   tileSelect
 }

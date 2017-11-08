@@ -8,6 +8,14 @@ $pagecolor: #d34f1b;
 $footerbackcolor: #000;
 $foottextcolor: #fff;
 
+body {
+  $pagecolor: #d34f1b;
+}
+
+div {
+  $pagecolor: #d34f1b;
+}
+
 html {
   background-color: $pagecolor;
 }
@@ -24,13 +32,6 @@ header {
 
 h3 {
   text-align: center;
-}
-
-footer {
-  background-color: $footerbackcolor;
-  color: $foottextcolor;
-  height: 15%;
-  padding: 10% auto;
 }
 
 form {
@@ -64,7 +65,7 @@ td {
 }
 
 .winner {
-  font-size: 24px;
+  font-size: 40px;
   margin: 10px, auto;
   padding: 10px;
   text-align: center;
@@ -74,10 +75,7 @@ td {
   background-color: $pagecolor;
 }
 
-.alerts {
-  float: left;
-}
-
-.alerts-headings {
-  float: left;
+.game-piece {
+  font-size: 24px;
+  text-align: center;
 }
