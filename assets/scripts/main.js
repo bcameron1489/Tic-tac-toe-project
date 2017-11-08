@@ -83,8 +83,13 @@ const tileSelect = function () {
         $(gameBoard).html('Player 1\'s Turn!')
         gameInfo.turn = 0
         return $(showWinner).html(sq6 + ' Wins')
-      } else { // no winner so return "false"
-        return false
+      } else if (gameInfo.turn === 9) {
+        $('.game-piece').html('')
+        $(gameBoard).html('Player 1\'s Turn!')
+        gameInfo.turn = 0
+        return $(showWinner).html('Tie!')
+      } else {
+        return false // no winner so return "false"
       }
     })
   }
