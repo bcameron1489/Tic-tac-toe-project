@@ -10,7 +10,11 @@ const tileSelect = function () {
   // alternate turns
   const takeTurns = function () {
     $('.game-piece').on('click', function (event) {
-      if (gameInfo.turn % 2 === 0) {
+      if ($(this).html() === 'X' || $(this).html() === 'O') {
+        $(gameBoard).html('Pick again!')
+        return null
+      } else if
+      (gameInfo.turn % 2 === 0) {
         $(this).html('X')
         $(gameBoard).html('Player 2\'s Turn!')
       } else if
@@ -59,9 +63,11 @@ const tileSelect = function () {
     })
   }
 
+
+
+
   takeTurns()
   checkWinner()
-  // display turn
 }
 module.exports = {
   tileSelect
