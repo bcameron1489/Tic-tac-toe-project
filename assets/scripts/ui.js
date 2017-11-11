@@ -1,5 +1,5 @@
 'use strict'
-const store = require
+const store = require('./store')
 
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
