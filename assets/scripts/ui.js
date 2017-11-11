@@ -17,9 +17,20 @@ const onSignInFailure = function () {
   console.log('Failure')
 }
 
+const onSignOutSuccess = function (data) {
+  $('.alerts').html('Signed Out!')
+  console.log('Success!')
+}
+
+const onSignOutFailure = function () {
+  console.log('Failure')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
-  onSignInFailure
+  onSignInFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
