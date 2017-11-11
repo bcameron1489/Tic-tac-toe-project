@@ -1,4 +1,5 @@
 'use strict'
+const store = require
 
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
@@ -21,6 +22,7 @@ const onSignInFailure = function () {
 const onSignOutSuccess = function () {
   $('.alerts').html('Signed Out!')
   console.log('Success!')
+  store.user = null
 }
 
 const onSignOutFailure = function () {
