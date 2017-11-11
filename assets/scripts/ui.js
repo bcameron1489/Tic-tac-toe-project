@@ -2,6 +2,7 @@
 
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
+  console.log(data)
 }
 
 const onSignUpFailure = function () {
@@ -10,14 +11,14 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (data) {
   $('.alerts').html('Signed In!')
-  console.log('Success!')
+  console.log(data)
 }
 
 const onSignInFailure = function () {
   console.log('Failure')
 }
 
-const onSignOutSuccess = function (data) {
+const onSignOutSuccess = function () {
   $('.alerts').html('Signed Out!')
   console.log('Success!')
 }
