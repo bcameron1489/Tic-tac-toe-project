@@ -30,11 +30,22 @@ const onSignOutFailure = function () {
   console.log('Failure')
 }
 
+const changePasswordSuccess = function () {
+  $('.alerts').html('Changed Password!')
+  console.log('Success!')
+}
+
+const changePasswordFailure = function () {
+  console.log('Failure!')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }
