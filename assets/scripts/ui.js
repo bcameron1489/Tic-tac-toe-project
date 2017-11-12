@@ -13,6 +13,7 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (data) {
   $('.alerts').html('Signed In!')
   console.log(data)
+  store.user = data.user
 }
 
 const onSignInFailure = function () {
