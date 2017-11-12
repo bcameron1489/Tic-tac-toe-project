@@ -3,7 +3,7 @@
 const config = require('./config')
 
 const store = require('./store')
-
+// Sign up ajax request
 const signUp = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
@@ -11,7 +11,7 @@ const signUp = function (data) {
     data
   })
 }
-
+// Sign in ajax request
 const signIn = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
@@ -19,7 +19,7 @@ const signIn = function (data) {
     data
   })
 }
-
+// Sign out ajax request
 const signOut = function (event) {
   return $.ajax({
     url: config.apiOrigin + '/sign-out/' + store.user.id,
@@ -29,7 +29,7 @@ const signOut = function (event) {
     }
   })
 }
-
+// Change password ajax request
 const changePassword = function (data) {
   console.log('data is ', data)
   return $.ajax({

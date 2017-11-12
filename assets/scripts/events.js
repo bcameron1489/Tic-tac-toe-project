@@ -1,7 +1,7 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-
+// Sign up function
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -9,7 +9,7 @@ const onSignUp = function (event) {
     .then(ui.onSignUpSuccess)
     .catch(ui.onSignUpFailure)
 }
-
+// Sign In function
 const onSignIn = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -18,7 +18,7 @@ const onSignIn = function (event) {
     .then(ui.onSignInSuccess)
     .catch(ui.onSignInFailure)
 }
-
+// Sign Out function
 const onSignOut = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -26,7 +26,7 @@ const onSignOut = function (event) {
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
 }
-
+// Change Password function
 const onChangePassword = function (event) {
   event.preventDefault()
   console.log('Changed Password!')
@@ -35,7 +35,7 @@ const onChangePassword = function (event) {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
-
+// Jquery event handlers on submit > see ./index.js
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)

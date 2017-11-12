@@ -1,6 +1,6 @@
 'use strict'
 const store = require('./store')
-
+// Success & Failure message display on Sign up
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
   console.log(data)
@@ -9,7 +9,7 @@ const onSignUpSuccess = function (data) {
 const onSignUpFailure = function () {
   console.log('Failure')
 }
-
+// Success & Failure message display on Sign in + store user data
 const onSignInSuccess = function (data) {
   $('.alerts').html('Signed In!')
   console.log(data)
@@ -19,7 +19,7 @@ const onSignInSuccess = function (data) {
 const onSignInFailure = function () {
   console.log('Failure')
 }
-
+// Success & Failure message display on Sign out
 const onSignOutSuccess = function () {
   $('.alerts').html('Signed Out!')
   console.log('Success!')
@@ -29,7 +29,7 @@ const onSignOutSuccess = function () {
 const onSignOutFailure = function () {
   console.log('Failure')
 }
-
+// Success & Failure message display on Change Password
 const changePasswordSuccess = function () {
   $('.alerts').html('Changed Password!')
   console.log('Success!')

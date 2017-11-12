@@ -94,8 +94,8 @@ const tileSelect = function () {
     })
   }
 
-  // function triggers making sure turn goes before winner is checked or
-  // else it will take an additional click to register the html element for win
+  // Make sure the order of function triggers properly or else :
+  // it will take an additional click to register the html element for win
   takeTurns()
   checkWinner()
 }
