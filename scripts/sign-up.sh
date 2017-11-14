@@ -9,3 +9,5 @@ curl "https://aqueous-atoll-85096.herokuapp.com/sign-up" \
       "password_confirmation": "'"${PASSWORD_CONFIRMATION}"'"
     }
 }'
+
+# EMAIL='' PASSWORD='' PASSWORD_CONFIRMATION='' sh scripts/sign-up.sh
