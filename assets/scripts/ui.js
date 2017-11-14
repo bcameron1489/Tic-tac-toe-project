@@ -3,6 +3,7 @@ const store = require('./store')
 // Success & Failure message display on Sign up
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
+  $('#sign-up').hide()
   console.log(data)
 }
 
