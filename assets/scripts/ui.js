@@ -3,6 +3,7 @@ const store = require('./store')
 
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
+  $('#sign-up').hide()
   console.log(data)
 }
 
