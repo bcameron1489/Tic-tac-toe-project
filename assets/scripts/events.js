@@ -1,12 +1,9 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-<<<<<<< HEAD
-// Sign up function
-=======
+
 const store = require('./store')
 
->>>>>>> game-actions
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -40,9 +37,6 @@ const onChangePassword = function (event) {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
-<<<<<<< HEAD
-// Jquery event handlers on submit > see ./index.js
-=======
 
 const onCreateGame = function (event) {
   event.preventDefault()
@@ -64,7 +58,6 @@ const onGameIndex = function (event) {
     .catch(ui.gamefailure)
 }
 
->>>>>>> game-actions
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
