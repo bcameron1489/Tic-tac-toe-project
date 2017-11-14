@@ -1,7 +1,12 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+<<<<<<< HEAD
 // Sign up function
+=======
+const store = require('./store')
+
+>>>>>>> game-actions
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -35,12 +40,38 @@ const onChangePassword = function (event) {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
+<<<<<<< HEAD
 // Jquery event handlers on submit > see ./index.js
+=======
+
+const onCreateGame = function (event) {
+  event.preventDefault()
+  api.createGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
+}
+
+const onUpdateGame = function (event) {
+  api.updateGame(store.currentGameState)
+    .then(ui.updateGameSuccess)
+    .catch(ui.updateGameFailure)
+}
+
+const onGameIndex = function (event) {
+  event.preventDefault()
+  api.gameIndex()
+    .then(ui.gameIndexSuccess)
+    .catch(ui.gamefailure)
+}
+
+>>>>>>> game-actions
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#create-game').on('submit', onCreateGame)
+  $('#game-index').on('submit', onGameIndex)
 }
 
 module.exports = {
@@ -48,5 +79,8 @@ module.exports = {
   onSignIn,
   onSignUp,
   onSignOut,
-  onChangePassword
+  onChangePassword,
+  onCreateGame,
+  onUpdateGame,
+  onGameIndex
 }

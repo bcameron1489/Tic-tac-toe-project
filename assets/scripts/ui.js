@@ -39,6 +39,28 @@ const changePasswordFailure = function () {
   console.log('Failure!')
 }
 
+const createGameSuccess = function (data) {
+  store.game = data.game
+  console.log(data)
+}
+
+const createGameFailure = function () {
+  $('.alerts').html('Failed to create new game')
+}
+
+const updateGameSuccess = function (data) {
+  store.game = data.game
+  console.log(data)
+}
+
+const updateGameFailure = function () {
+  $('.alerts').html('Failed to update game')
+}
+
+const gameIndexSuccess = function (data) {
+  $('.alerts').html('You have played ' + data.games.length + ' games')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -47,5 +69,10 @@ module.exports = {
   onSignOutSuccess,
   onSignOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  createGameSuccess,
+  createGameFailure,
+  updateGameSuccess,
+  updateGameFailure,
+  gameIndexSuccess
 }
