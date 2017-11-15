@@ -42,6 +42,7 @@ const changePasswordFailure = function () {
 
 const createGameSuccess = function (data) {
   store.game = data.game
+  $('.game-piece').on('click')
   console.log(data)
 }
 

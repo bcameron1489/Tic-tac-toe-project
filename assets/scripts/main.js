@@ -94,8 +94,15 @@ const tileSelect = function () {
     })
   }
 
-  // Make sure the order of function triggers properly or else :
-  // it will take an additional click to register the html element for win
+/*  const disable = function () {
+    if (checkWinner === true) {
+      $('.game-piece').off('click')
+    } else {
+      return null
+    }
+  } */
+  // function triggers making sure turn goes before winner is checked or
+  // else it will take an additional click to register the html element for win
   takeTurns()
   checkWinner()
 }
