@@ -1,5 +1,6 @@
 'use strict'
 const store = require('./store')
+const main = require('./main')
 // Success & Failure message display on Sign up
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
@@ -41,9 +42,10 @@ const changePasswordFailure = function () {
 }
 
 const createGameSuccess = function (data) {
+  main.tileSelect()
   store.game = data.game
-  $('.game-piece').on('click')
-  console.log(data)
+  $('.alerts').html('New game created!')
+  $('.winner').html('')
 }
 
 const createGameFailure = function () {
@@ -61,6 +63,9 @@ const updateGameFailure = function () {
 
 const gameIndexSuccess = function (data) {
   $('.alerts').html('You have played ' + data.games.length + ' games')
+/*  setTimeout(function () {
+    $('.alerts').fadeOut('fast')
+  }, 10000) */
 }
 
 module.exports = {

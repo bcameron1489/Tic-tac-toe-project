@@ -1,8 +1,19 @@
 // turn game logic
+const disable = function () {
+  $('.game-piece').off('click')
+}
 
 const tileSelect = function () {
   const gameInfo = {
     turn: (0)
+  }
+
+  const turnReset = function () {
+    $(gameBoard).html('Player 1\'s Turn!')
+  }
+
+  const clearBoard = function () {
+    $('.game-piece').html('')
   }
   // give variable to the class which shows turn
   const gameBoard = $('.turn')
@@ -44,48 +55,57 @@ const tileSelect = function () {
       const sq8 = $('#tile-eight').html()
 
       if (sq0 !== '' & sq0 === sq1 & sq1 === sq2) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq3 !== '' & sq3 === sq4 & sq4 === sq5) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq3 + ' Wins')
       } else if (sq6 !== '' & sq6 === sq7 & sq7 === sq8) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq6 + ' Wins')
       } else if (sq0 !== '' & sq0 === sq3 & sq3 === sq6) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq1 !== '' & sq1 === sq4 & sq4 === sq7) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq1 + ' Wins')
       } else if (sq2 !== '' & sq2 === sq5 & sq5 === sq8) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq2 + ' Wins')
       } else if (sq0 !== '' & sq0 === sq4 & sq4 === sq8) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq6 !== '' & sq6 === sq4 & sq4 === sq2) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html(sq6 + ' Wins')
       } else if (gameInfo.turn === 9) {
-        $('.game-piece').html('')
-        $(gameBoard).html('Player 1\'s Turn!')
+        clearBoard()
+        turnReset()
+        disable()
         gameInfo.turn = 0
         return $(showWinner).html('Tie!')
       } else {
@@ -94,19 +114,13 @@ const tileSelect = function () {
     })
   }
 
-/*  const disable = function () {
-    if (checkWinner === true) {
-      $('.game-piece').off('click')
-    } else {
-      return null
-    }
-  } */
   // function triggers making sure turn goes before winner is checked or
   // else it will take an additional click to register the html element for win
   takeTurns()
   checkWinner()
 }
-
+disable()
 module.exports = {
-  tileSelect
+  tileSelect,
+  disable
 }

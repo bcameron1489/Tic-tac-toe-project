@@ -18,4 +18,5 @@ $(() => {
 // require('./example')
 $(() => {
   main.tileSelect()
+  main.disable()
 })
