@@ -12,8 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+      <div class="alerts">
+      </div>
+      <div class="wrapper">
+      <button class="show-login" type="button">Log In!</button>
       <div class="hide-form-up">
-      <form id="sign-up">
+        <div class="hide-sign-forms">
+      <form id="sign-up" class="buttons">
       <fieldset>
         <input type="submit" name="submit" value="Sign up!">
         <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
@@ -22,14 +27,17 @@
       </fieldset>
   </form>
 </div>
+</div>
 <div class="hide-form-in">
-<form id="sign-in">
+  <div class="hide-sign-forms">
+<form id="sign-in" class="buttons">
 <fieldset>
   <input type="submit" name="submit" value="Sign in!">
   <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
   <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
 </fieldset>
 </form>
+</div>
 </div>
 <div class="hide-form-in">
 <form id="sign-out">
@@ -39,7 +47,7 @@
 </form>
 </div>
 <div class="hide-form-in">
-<form id="change-password">
+<form id="change-password" class="buttons">
 <fieldset>
    <input type="submit" name="submit" value="Change Password!">
    <input type="text" name="passwords[old]" placeholder="Old Password">
@@ -47,6 +55,7 @@
 </fieldset>
 </form>
 </div>
+<div class="hide-body">
 <div class="index">
   <form id="game-index">
       <fieldset>
@@ -54,8 +63,6 @@
       </fieldset>
     </form>
   </div>
-<div class="alerts">
-</div>
 <div class="bodystylediv">
   <div class="topcolorscheme">
 </div>
@@ -98,15 +105,12 @@
     </tr>
 </table>
 </div>
-<h3>Message Box</h3>
   <div class="container">
     <div class="row">
-      <div class="col-xs-2 box message-box">
-      </div>
     </div>
   </div>
-<footer>
-
-</footer>
+</div>
+</div>
   </body>
+
 </html>

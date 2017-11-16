@@ -14,7 +14,10 @@ const onSignUpFailure = function () {
 // Success & Failure message display on Sign in + store user data
 const onSignInSuccess = function (data) {
   $('.alerts').html('Signed In!')
-  console.log(data)
+  $('.hide-body').show()
+  $('.hide-sign-forms').hide()
+  $('.show-login').hide()
+  $('#sign-out').show()
   store.user = data.user
 }
 
@@ -24,7 +27,8 @@ const onSignInFailure = function () {
 // Success & Failure message display on Sign out
 const onSignOutSuccess = function () {
   $('.alerts').html('Signed Out!')
-  console.log('Success!')
+  $('.show-login').show()
+  $('#sign-out').hide()
   store.user = null
 }
 

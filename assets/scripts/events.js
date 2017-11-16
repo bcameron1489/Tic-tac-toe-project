@@ -3,7 +3,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 const store = require('./store')
-
+/* ---- Auth/Game Events ---- */
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -58,6 +58,29 @@ const onGameIndex = function (event) {
     .catch(ui.gamefailure)
 }
 
+/* ---- Show/Hide Forms ---- */
+
+const hideBody = function () {
+  $('.hide-body').hide()
+}
+
+hideBody()
+
+const hideButtons = function () {
+  $('.buttons').hide()
+  $('#sign-out').hide()
+}
+
+hideButtons()
+
+const showButtons = function () {
+  $('.show-login').on('click', function () {
+    $('.buttons').show()
+    $('.hide-sign-forms').show()
+    hideBody()
+  })
+}
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
@@ -75,5 +98,6 @@ module.exports = {
   onChangePassword,
   onCreateGame,
   onUpdateGame,
-  onGameIndex
+  onGameIndex,
+  showButtons
 }
