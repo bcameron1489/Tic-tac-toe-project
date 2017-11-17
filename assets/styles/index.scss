@@ -10,6 +10,7 @@ $foottextcolor: #fff;
 
 body {
   $pagecolor: #d34f1b;
+  position: relative;
 }
 
 div {
@@ -93,8 +94,10 @@ td {
 }
 
 .alerts {
-  float: right;
   font-size: 24px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
 }
 
 .wrapper {
@@ -110,6 +113,5 @@ td {
   bottom: 0;
   height: 200;
   margin: 0 auto;
-  position: static;
   width: 200;
 }
