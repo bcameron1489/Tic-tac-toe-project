@@ -20,6 +20,7 @@ const onSignInSuccess = function (data) {
   $('#game-index').show()
   $('.new-game').show()
   $('#change-password').show()
+  $('.turn').html('')
   main.clearBoard()
   store.user = data.user
 }
