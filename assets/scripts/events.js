@@ -69,6 +69,7 @@ hideBody()
 const hideButtons = function () {
   $('.buttons').hide()
   $('#sign-out').hide()
+  $('#change-password').hide()
 }
 
 hideButtons()

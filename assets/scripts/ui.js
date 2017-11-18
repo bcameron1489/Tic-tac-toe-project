@@ -5,11 +5,10 @@ const main = require('./main')
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
   $('#sign-up').hide()
-  console.log(data)
 }
 
 const onSignUpFailure = function () {
-  console.log('Failure')
+  $('.alerts').html('Failed to sign up')
 }
 // Success & Failure message display on Sign in + store user data
 const onSignInSuccess = function (data) {
@@ -20,11 +19,12 @@ const onSignInSuccess = function (data) {
   $('#sign-out').show()
   $('#game-index').show()
   $('#create-game').show()
+  $('#change-password').show()
   store.user = data.user
 }
 
 const onSignInFailure = function () {
-  console.log('Failure')
+  $('.alerts').html('Failed to sign in')
 }
 // Success & Failure message display on Sign out
 const onSignOutSuccess = function () {
@@ -39,16 +39,15 @@ const onSignOutSuccess = function () {
 }
 
 const onSignOutFailure = function () {
-  console.log('ailure')
+  $('.alerts').html('Failed to sign out')
 }
 // Success & Failure message display on Change Password
 const changePasswordSuccess = function () {
   $('.alerts').html('Changed Password!')
-  console.log('Success!')
 }
 
 const changePasswordFailure = function () {
-  console.log('Failure!')
+  $('.alerts').html('Failed to change password')
 }
 
 const createGameSuccess = function (data) {
@@ -65,7 +64,6 @@ const createGameFailure = function () {
 
 const updateGameSuccess = function (data) {
   store.game = data.game
-  console.log(data)
 }
 
 const updateGameFailure = function () {
