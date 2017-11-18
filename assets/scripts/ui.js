@@ -18,8 +18,9 @@ const onSignInSuccess = function (data) {
   $('.show-login').hide()
   $('#sign-out').show()
   $('#game-index').show()
-  $('#create-game').show()
+  $('.new-game').show()
   $('#change-password').show()
+  main.clearBoard()
   store.user = data.user
 }
 
@@ -33,7 +34,7 @@ const onSignOutSuccess = function () {
   $('#sign-out').hide()
   $('#change-password').hide()
   $('#game-index').hide()
-  $('#create-game').hide()
+  $('.new-game').hide()
   main.disable()
   store.user = null
 }

@@ -3,6 +3,10 @@ const disable = function () {
   $('.game-piece').off('click')
 }
 
+const clearBoard = function () {
+  $('.game-piece').html('')
+}
+
 const tileSelect = function () {
   const gameInfo = {
     turn: (0)
@@ -10,10 +14,6 @@ const tileSelect = function () {
 
   const turnReset = function () {
     $(gameBoard).html('Player 1\'s Turn!')
-  }
-
-  const clearBoard = function () {
-    $('.game-piece').html('')
   }
 
   const showNewGame = function () {
@@ -135,5 +135,6 @@ const tileSelect = function () {
 disable()
 module.exports = {
   tileSelect,
-  disable
+  disable,
+  clearBoard
 }
