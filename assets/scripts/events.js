@@ -81,6 +81,14 @@ const showButtons = function () {
   })
 }
 
+const hideLogin = function () {
+  $('.show-login').on('click', function () {
+    $('.show-login').hide()
+  })
+}
+
+hideLogin()
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
