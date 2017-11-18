@@ -67,6 +67,7 @@ td {
 
 .winner {
   font-size: 40px;
+  height: 40px;
   margin: 10px, auto;
   padding: 10px;
   text-align: center;
@@ -82,15 +83,16 @@ td {
 }
 
 .new-game {
-  border: 0;
   display: block;
+  float: right;
   font-size: 14px;
-  margin: 0 auto;
+  margin-right: 0;
+  min-height: 10px;
   outline: none;
+  padding: 0;
   position: relative;
   text-align: center;
   text-decoration: none;
-  width: 20%;
 }
 
 .alerts {
@@ -114,4 +116,10 @@ td {
   height: 200;
   margin: 0 auto;
   width: 200;
+}
+
+.index {
+  padding: 10px;
+  position: absolute;
+  right: 0;
 }
