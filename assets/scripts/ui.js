@@ -29,6 +29,7 @@ const onSignOutSuccess = function () {
   $('.alerts').html('Signed Out!')
   $('.show-login').show()
   $('#sign-out').hide()
+  $('#change-password').hide()
   store.user = null
 }
 
