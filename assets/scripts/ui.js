@@ -50,6 +50,7 @@ const createGameSuccess = function (data) {
   store.game = data.game
   $('.alerts').html('New game created!')
   $('.winner').html('')
+  $('.new-game').hide()
 }
 
 const createGameFailure = function () {

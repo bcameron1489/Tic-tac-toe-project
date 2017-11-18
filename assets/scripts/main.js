@@ -15,6 +15,10 @@ const tileSelect = function () {
   const clearBoard = function () {
     $('.game-piece').html('')
   }
+
+  const showNewGame = function () {
+    $('.new-game').show()
+  }
   // give variable to the class which shows turn
   const gameBoard = $('.turn')
 
@@ -58,54 +62,63 @@ const tileSelect = function () {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq3 !== '' & sq3 === sq4 & sq4 === sq5) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq3 + ' Wins')
       } else if (sq6 !== '' & sq6 === sq7 & sq7 === sq8) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq6 + ' Wins')
       } else if (sq0 !== '' & sq0 === sq3 & sq3 === sq6) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq1 !== '' & sq1 === sq4 & sq4 === sq7) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq1 + ' Wins')
       } else if (sq2 !== '' & sq2 === sq5 & sq5 === sq8) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq2 + ' Wins')
       } else if (sq0 !== '' & sq0 === sq4 & sq4 === sq8) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq0 + ' Wins')
       } else if (sq6 !== '' & sq6 === sq4 & sq4 === sq2) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html(sq6 + ' Wins')
       } else if (gameInfo.turn === 9) {
         clearBoard()
         turnReset()
         disable()
+        showNewGame()
         gameInfo.turn = 0
         return $(showWinner).html('Tie!')
       } else {
