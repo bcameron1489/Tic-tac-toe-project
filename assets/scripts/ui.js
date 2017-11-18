@@ -34,7 +34,7 @@ const onSignOutSuccess = function () {
 }
 
 const onSignOutFailure = function () {
-  console.log('Failure')
+  console.log('ailure')
 }
 // Success & Failure message display on Change Password
 const changePasswordSuccess = function () {
