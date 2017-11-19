@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Camerons Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <div class="alerts">
+      </div>
+      <div class="wrapper">
+      <button class="show-login" type="button">Log In!</button>
+      <div class="hide-form-up">
+        <div class="hide-sign-forms">
+          <div class="position-sign-up">
+      <form id="sign-up" class="buttons">
+      <fieldset>
+        <input type="submit" name="submit" value="Sign up!">
+        <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
+        <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
+        <input name="credentials[password_confirmation]" type="password" class="input" placeholder="PASSWORD_CONFIRMATION">
+      </fieldset>
+  </form>
+</div>
+</div>
+</div>
+<div class="hide-form-in">
+  <div class="hide-sign-forms">
+    <div class="position-sign-in">
+<form id="sign-in" class="buttons">
+<fieldset>
+  <input type="submit" name="submit" value="Sign in!">
+  <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
+  <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class="hide-form-in">
+<form id="sign-out">
+<fieldset>
+  <input type="submit" name="submit" value="Sign out!">
+</fieldset>
+</form>
+</div>
+<div class="hide-form-in">
+  <div class="position-change-password">
+<form id="change-password">
+<fieldset>
+   <input type="submit" name="submit" value="Change Password!">
+   <input type="text" name="passwords[old]" class="input" placeholder="Old Password">
+   <input type="password" name="passwords[new]" class="input" placeholder="New Password">
+</fieldset>
+</form>
+</div>
+</div>
+<div class="hide-body">
+<div class="index">
+  <form id="game-index">
+      <fieldset>
+        <input type="submit" name="submit" value="Show Games Played!">
+      </fieldset>
+    </form>
+  </div>
+<div class="bodystylediv">
+  <div class="topcolorscheme">
+</div>
+      <header>
+        <h1 class="page-title">Brian Cameron's Tic Tac Toe</h1>
+      </header>
+</br>
+</div>
+<div class="game-title">
+</div>
+<div class="new-game">
+  <form id="create-game">
+  <fieldset>
+    <input type="submit" name="submit" value="New Game!">
+  </fieldset>
+</form>
+</div>
+</br>
+<div class="hide-all-game">
+<div class="winner"></div>
+<h4 class="turn"></h4>
+<div class="game-board">
+  <table id="game-grid">
+    <tr class="top-row">
+        <td id="tile-zero" class="game-piece"></td>
+        <td id="tile-one" class="game-piece"></td>
+        <td id="tile-two" class="game-piece"></td>
+    </tr>
+    <tr class="middle-row">
+        <td id="tile-three" class="game-piece"></td>
+        <td id="tile-four" class="game-piece"></td>
+        <td id="tile-five" class="game-piece"></td>
+    </tr>
+    <tr class="bottom-row">
+        <td id="tile-six" class="game-piece"></td>
+        <td id="tile-seven" class="game-piece"></td>
+        <td id="tile-eight" class="game-piece"></td>
+    </tr>
+</table>
+</div>
+  <div class="container">
+    <div class="row">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  </body>
+
+</html>
