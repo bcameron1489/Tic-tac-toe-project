@@ -48,6 +48,7 @@ const onSignOutFailure = function () {
 // Success & Failure message display on Change Password
 const changePasswordSuccess = function () {
   $('.alerts').html('Changed Password!')
+  $('.input').val('')
 }
 
 const changePasswordFailure = function () {
