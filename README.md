@@ -1,8 +1,20 @@
 Brian Cameron Tic Tac Toe Project
 
-Wireframes :
+Wireframes : https://i.imgur.com/haj2Frs.jpg
 
-User Stories : 
+User Stories :  As a new user, I want to create a username so I can play tic tac toe.
+              - As a user with appropriate credentials, I want to play tic tac toe
+                  -- I want to be player 1 so I can pick first
+                  -- I want to pick x-coordinate so I can win
+                  -- I want to play again because that was fun!
+              - As a pre existing user, I want to change my password so I can remember it
+              - As a pre existing user, I want to click on the leaderboards tab in the nav bar so I can check my stats
+              - As a user, I want to sign out
+
+                As a developer, I want to write modular code so it can be readable.
+                As a developer, I want to use jquery for dom interactions.
+                As a developer, I want my game functionality to be simple and easy for the user .
+                As a developer, I want my code to work within a SPA without any page refresh.
 
 
 Technologies used: html, css/sass, javascript, ajax, jquery, gitHub, linux ubuntu, atom, terminal/curl shell scripts
