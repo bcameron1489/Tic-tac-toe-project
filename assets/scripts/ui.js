@@ -4,6 +4,7 @@ const main = require('./main')
 // Success & Failure message display on Sign up
 const onSignUpSuccess = function (data) {
   $('.alerts').html('Thank you for signing up!')
+  $('#sign-up').hide()
 }
 
 const onSignUpFailure = function () {
@@ -35,8 +36,8 @@ const onSignOutSuccess = function () {
   $('#change-password').hide()
   $('#game-index').hide()
   $('.new-game').hide()
-  $('.hide-all-game').hide()
-  $('.page-title').hide()
+  $('.hide-body').hide()
+  $('.input').val('')
   main.disable()
   store.user = null
 }
