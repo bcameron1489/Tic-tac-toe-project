@@ -8,30 +8,44 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Do not add `script` tags-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
-  <body class="container-fluid">
-    <h3 class='winner'>
-    </h3>
-    <table id="game-grid">
-    <tr class="top-row">
-        <td id="tile-zero" class="game-piece"></td>
-        <td id="tile-one" class="game-piece"></td>
-        <td id="tile-two" class="game-piece"></td>
-    </tr>
-    <tr class="middle-row">
-        <td id="tile-three" class="game-piece"></td>
-        <td id="tile-four" class="game-piece"></td>
-        <td id="tile-five" class="game-piece"></td>
-    </tr>
-    <tr class="bottom-row">
-        <td id="tile-six" class="game-piece"></td>
-        <td id="tile-seven" class="game-piece"></td>
-        <td id="tile-eight" class="game-piece"></td>
-    </tr>
-</table>
-
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="show-login">Login <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h3 class='winner'>
+      </h3>
+      <table id="game-grid">
+        <tr class="top-row">
+          <td id="tile-zero" class="game-piece"></td>
+          <td id="tile-one" class="game-piece"></td>
+          <td id="tile-two" class="game-piece"></td>
+        </tr>
+        <tr class="middle-row">
+          <td id="tile-three" class="game-piece"></td>
+          <td id="tile-four" class="game-piece"></td>
+          <td id="tile-five" class="game-piece"></td>
+        </tr>
+        <tr class="bottom-row">
+          <td id="tile-six" class="game-piece"></td>
+          <td id="tile-seven" class="game-piece"></td>
+          <td id="tile-eight" class="game-piece"></td>
+        </tr>
+      </table>
+    </div>
   </body>
-
 </html>
